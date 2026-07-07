@@ -74,12 +74,14 @@ You'll also need a TinyMCE API key (free tier available at [tiny.cloud](https://
 Your posts collection should include the following attributes:
 
 | Attribute | Type | Required |
+
 |---|---|---|
-| `title` | string | Yes |
-| `content` | string | Yes |
-| `featuredImage` | string (file ID) | Yes |
-| `status` | string (`active` / `inactive`) | Yes |
-| `userId` | string | Yes |
+
+| `title` |--> string | Yes |
+| `content` |--> string | Yes |
+| `featuredImage` |--> string (file ID) | Yes |
+| `status` |--> string (`active` / `inactive`) | Yes |
+| `userId` |--> string | Yes |
 
 ### Run locally
 
