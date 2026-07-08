@@ -13,6 +13,7 @@ import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
 import Input from "./Input.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
+import ShareButton from "./ShareButton.jsx";
 export {
     Header,
     Footer,
@@ -29,4 +30,5 @@ export {
     Input,
     Select,
     ThemeToggle,
+     ShareButton,
 }
