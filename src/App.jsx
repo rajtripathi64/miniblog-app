@@ -12,9 +12,10 @@ function App() {
 
   useEffect(() => {
     authService.getCurrentUser()
-    .then((userData) => {
+    .then(async (userData) => {
       if (userData) {
-        dispatch(login({userData}))
+        const username = await authService.getUsernameByUserId(userData.$id)
+        dispatch(login({userData, username}))
       } else {
         dispatch(logout())
       }

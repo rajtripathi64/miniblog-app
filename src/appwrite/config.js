@@ -14,7 +14,7 @@ export class Service{
         this.bucket = new Storage(this.client);
     }
 
-    async createPost({title, slug, content, featuredImage, status, userId}){
+    async createPost({title, slug, content, featuredImage, status, userId, userName}){
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
@@ -26,6 +26,7 @@ export class Service{
                     featuredImage,
                     status,
                     userId,
+                    userName,
                 }
             )
         } catch (error) {
@@ -126,18 +127,18 @@ export class Service{
     );
     }
 
-    // async deleteFile(fileId){
-    // try {
-    //     await this.bucket.deleteFile(
-    //         conf.appwriteBucketId,
-    //         fileId
-    //     );
-    //     return true;
-    // } catch (error) {
-    //     console.log("Appwrite service :: deleteFile :: error", error);
-    //     return false;
-    // }
-    // }
+//    async deleteFile(fileId){
+//     try {
+//         await this.bucket.deleteFile(
+//             conf.appwriteBucketId,
+//             fileId
+//         );
+//         return true;
+//     } catch (error) {
+//         console.log("Appwrite service :: deleteFile :: error", error);
+//         return false;
+//     }
+//     }
 
 }
 
