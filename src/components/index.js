@@ -15,6 +15,7 @@ import Input from "./Input.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
 import ShareButton from "./ShareButton.jsx";
 import AuthorHeader from "./AuthorHeader.jsx";
+import Reactions from "./Reactions.jsx";
 export {
     Header,
     Footer,
@@ -33,4 +34,5 @@ export {
     ThemeToggle,
     ShareButton,
     AuthorHeader,
+    Reactions,
 }

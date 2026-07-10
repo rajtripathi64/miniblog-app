@@ -30,6 +30,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { PencilIcon, TrashIcon } from './icons/PostActionBtn'
 import AuthorHeader from './AuthorHeader'
+import Reactions from './Reactions'
 // import ShareButton from './ShareButton'
 
 
@@ -131,14 +132,12 @@ function PostCard({ $id, title, featuredImage, userId, userName }) {
           <h2 className="line-clamp-2 text-lg font-bold text-slate-900  dark:text-white ">
             {title}
           </h2>
-          {userName && (
-            <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-              by {userName}
-            </p>
-          )}
-          <span className="mt-auto pt-2 text-sm font-medium text-indigo-600 dark:text-indigo-400">
-            Read more &rarr;
-          </span>
+           <div className="mt-auto flex items-center justify-between gap-2 pt-3">
+            <Reactions postId={$id} />
+            <span className="shrink-0 text-sm font-medium text-indigo-600 dark:text-indigo-400">
+              Read more &rarr;
+            </span>
+          </div>
         </div>
       </div>
     </div>

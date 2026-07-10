@@ -73,6 +73,7 @@ import { Container, ShareButton, AuthorHeader } from "../components";
 import { PencilIcon, TrashIcon } from "../components/icons/PostActionBtn";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
+import Reactions from "../components/Reactions";
 
 export default function Post() {
     const [post, setPost] = useState(null);
@@ -156,13 +157,9 @@ export default function Post() {
                         />
                     </div>
                 </div>
-                <div className="mx-auto mb-3 w-full max-w-2xl">
+               <div className="mx-auto mb-6 w-full max-w-2xl">
                     <h1 className="text-2xl font-bold text-slate-900 dark:text-white">{post.title}</h1>
-                     {post.userName && (
-                        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                            by {post.userName}
-                        </p>
-                    )}
+                    <Reactions postId={post.$id} className="mt-3" />
                 </div>
                 <div className="browser-css mx-auto w-full max-w-2xl text-slate-700 dark:text-slate-300">
                     {parse(post.content)}
