@@ -2,10 +2,12 @@
 
 A full-stack blogging platform where users can create an account, sign in, and publish, edit, or delete their own blog posts — complete with rich text formatting, featured image uploads, and a light/dark/system theme toggle.
 
-**Live demo link:** [(https://miniblog-app-chi.vercel.app/)]
+**Live demo:** [miniblog-app-chi.vercel.app](https://miniblog-app-chi.vercel.app/)
 
-<!-- ![MiniBlog screenshot](./screenshots/home.png) -->
-<!-- Add 2-3 screenshots or a short GIF here once you have them: Home page, a post detail page, and the Add Post editor look great in a README. -->
+![Home page with post and reactions](./src/assets/screenshots/home.png)
+![AddPost detail with rich text editor](./src/assets/screenshots/addPost.png)
+![Login with different theme](./src/assets/screenshots/login.png)
+![Signup with username](./src/assets/screenshots/signup.png)
 
 ## Features
 
@@ -44,8 +46,8 @@ A full-stack blogging platform where users can create an account, sign in, and p
 ### Installation
 
 ```bash
-git clone https://github.com/<your-username>/miniblog-appwrite.git
-cd miniblog-appwrite
+git clone https://github.com/rajtripathi64/miniblog-app.git
+cd miniblog-app
 npm install
 ```
 
