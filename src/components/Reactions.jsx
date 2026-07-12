@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
-import reactionService from '../appwrite/reactions'
+import reactionService from '../appwrite/reactions.js'
 
 const EMOJIS = ['👍', '❤️', '😂', '😮', '😢']
 

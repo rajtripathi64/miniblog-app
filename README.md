@@ -2,7 +2,7 @@
 
 A full-stack blogging platform where users can create an account, sign in, and publish, edit, or delete their own blog posts — complete with rich text formatting, featured image uploads, and a light/dark/system theme toggle.
 
-**Live demo:** _add your Vercel/Netlify link here once deployed_
+**Live demo link:** [(https://miniblog-app-chi.vercel.app/)]
 
 <!-- ![MiniBlog screenshot](./screenshots/home.png) -->
 <!-- Add 2-3 screenshots or a short GIF here once you have them: Home page, a post detail page, and the Add Post editor look great in a README. -->
