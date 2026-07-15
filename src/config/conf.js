@@ -6,6 +6,7 @@ const conf={
     appwriteBucketId: String(import.meta.env.VITE_APPWRITE_BUCKET_ID),
     appwriteUsernamesCollectionId: String(import.meta.env.VITE_APPWRITE_USERNAMES_COLLECTION_ID),
     appwriteReactionsCollectionId: String(import.meta.env.VITE_APPWRITE_REACTIONS_COLLECTION_ID),
+    appwriteProfilesCollectionId: String(import.meta.env.VITE_APPWRITE_PROFILES_COLLECTION_ID),
 
 }
 
