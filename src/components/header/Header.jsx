@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Logo, LogoutBtn, ThemeToggle } from '../index'
+import { Container, Logo, LogoutBtn, ThemeToggle, SearchBar } from '../index'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -49,7 +49,10 @@ function Header() {
             )}
           </ul>
 
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="flex items-center gap-2">
+            <SearchBar />
+
+          <div className="hidden md:block">
             <ThemeToggle />
           </div>
 
@@ -72,6 +75,7 @@ function Header() {
                 </svg>
               )}
             </button>
+           </div>
           </div>
         </nav>
 

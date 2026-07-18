@@ -104,13 +104,14 @@ export class AuthService {
     // Reserves a username by creating a document whose ID *is* the username.
     // Appwrite will reject this if that ID already exists, which is what
     // gives us race-condition-proof uniqueness.
-    async reserveUsername(username, userId) {
+    async reserveUsername(username, userId, name) {
         const id = this.normalizeUsername(username);
         return await this.databases.createDocument(
             conf.appwriteDatabaseId,
             conf.appwriteUsernamesCollectionId,
             id,
-            { userId }
+            { userId, username: id, name, searchIndex: `${id} ${name || ""}`.trim(), }
+             
         );
     }
 
@@ -143,7 +144,7 @@ export class AuthService {
             await this.login({email, password});
 
             try {
-                await this.reserveUsername(username, userAccount.$id);
+                await this.reserveUsername(username, userAccount.$id, name);
             } catch (reserveError) {
                 // Username was taken (or reservation failed for another reason).
                 // Roll back the account we just created so we don't leave an

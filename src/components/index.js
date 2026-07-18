@@ -16,6 +16,7 @@ import ThemeToggle from "./ThemeToggle.jsx";
 import ShareButton from "./ShareButton.jsx";
 import AuthorHeader from "./AuthorHeader.jsx";
 import Reactions from "./Reactions.jsx";
+import SearchBar from "./SearchBar.jsx";
 export {
     Header,
     Footer,
@@ -35,4 +36,5 @@ export {
     ShareButton,
     AuthorHeader,
     Reactions,
+    SearchBar,
 }
