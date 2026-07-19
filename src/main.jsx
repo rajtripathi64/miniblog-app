@@ -14,6 +14,7 @@ import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
 
 import Post from "./pages/Post";
+import UserProfile from "./pages/UserProfile";
 
 import AllPost from "./pages/AllPost";
 import { ThemeProvider } from "./context/ThemeContext.jsx"
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
         {
             path: "/post/:slug",
             element: <Post />,
+        },
+        {
+            path: "/u/:username",
+            element: <UserProfile />,
         },
     ],
 },
